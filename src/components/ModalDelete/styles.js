@@ -6,10 +6,6 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6); */
 `;
 
 export const Form = styled.form`
@@ -35,20 +31,7 @@ export const Form = styled.form`
     margin-left: 24px;
     font-size: 14px;
     font-weight: normal;
-  }
-
-  input {
-    width: 384px;
-    height: 32px;
-    border-radius: 4px;
-    border: solid 1px #c0c3d2;
-    background-color: #ffffff;
-    margin: 4px 0 16px 24px;
-    padding: 7px 0 6px 8px;
-  }
-
-  #phone {
-    width: 128px;
+    margin-bottom: 57px;
   }
 
   .buttons {
@@ -68,7 +51,7 @@ export const Form = styled.form`
     font-stretch: normal;
   }
 
-  .salvar {
+  .excluir {
     width: 72px;
     height: 32px;
     font-size: 14px;

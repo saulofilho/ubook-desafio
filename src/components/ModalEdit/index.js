@@ -1,11 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MaskedInput from 'react-text-mask';
 import { Container, Form } from './styles';
 
-function ModalCreate(props) {
-  const initialFormState = { id: null, name: '', email: '', phone: '' };
-  const [contact, setContact] = useState(initialFormState);
+function ModalEdit(props) {
+  const [contact, setContact] = useState(props.currentContact);
+
+  useEffect(() => {
+    setContact(props.currentContact);
+  }, [props]);
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -16,22 +19,22 @@ function ModalCreate(props) {
   return (
     <Container>
       <Form>
-        <p>Criar novo contato</p>
+        <p>Editar contato</p>
         <label htmlFor="name">Nome</label>
         <input
           type="text"
-          name="name"
-          id="name"
+          id="namex"
           placeholder="Nome Completo"
+          name="name"
           value={contact.name}
           onChange={handleInputChange}
         />
         <label htmlFor="email">E-mail</label>
         <input
           type="text"
-          name="email"
-          id="email"
+          id="emailx"
           placeholder="seu@email.com"
+          name="email"
           value={contact.email}
           onChange={handleInputChange}
         />
@@ -54,14 +57,18 @@ function ModalCreate(props) {
             /\d/,
           ]}
           type="text"
-          name="phone"
-          id="phone"
+          id="phone2"
           placeholder="(01) 2345-6789"
+          name="phone"
           value={contact.phone}
           onChange={handleInputChange}
         />
         <div className="buttons">
-          <button className="cancelar" type="button">
+          <button
+            className="cancelar"
+            type="button"
+            onClick={() => props.setEditing(false)}
+          >
             Cancelar
           </button>
           <button
@@ -69,10 +76,7 @@ function ModalCreate(props) {
             type="button"
             onClick={e => {
               e.preventDefault();
-              if (!contact.name || !contact.email || !contact.phone) return;
-
-              props.addContact(contact);
-              setContact(initialFormState);
+              props.updateContact(contact.id, contact);
             }}
           >
             Salvar
@@ -83,4 +87,4 @@ function ModalCreate(props) {
   );
 }
 
-export default ModalCreate;
+export default ModalEdit;

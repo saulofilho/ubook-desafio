@@ -6,10 +6,6 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6); */
 `;
 
 export const Form = styled.form`
@@ -47,7 +43,7 @@ export const Form = styled.form`
     padding: 7px 0 6px 8px;
   }
 
-  #phone {
+  #phone2 {
     width: 128px;
   }
 

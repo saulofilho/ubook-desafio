@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { Container, Image, Search, Button } from './styles';
+import { Link } from 'react-router-dom';
+import ButtonHeader from '../ButtonHeader';
+import { Container, Image, Search } from './styles';
 import logo from '../../assets/images/ic-logo.png';
-import plus from '../../assets/images/ic-plus.png';
 
 function Header() {
   return (
@@ -13,10 +13,7 @@ function Header() {
         </Link>
       </div>
       <div className="right">
-        <Button>
-          <img src={plus} alt="Plus" />
-          Criar Contato
-        </Button>
+        <ButtonHeader />
         <Search placeholder="Buscar..." />
       </div>
     </Container>

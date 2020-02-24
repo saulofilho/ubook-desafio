@@ -1,26 +1,65 @@
-import React, { useState } from 'react';
-import { Container, Modal } from './styles';
+/* eslint-disable jsx-a11y/control-has-associated-label */
+import React from 'react';
+import { Table } from './styles';
+import edit from '../../assets/images/ic-edit.png';
+import delet from '../../assets/images/ic-delete.png';
 
-function TableRow() {
-  const [contacts, setContact] = useState(['']);
-  const [newContact, setNewContact] = useState('');
-
+function TableRow(props) {
   return (
     <>
-      <tr>
-        {contacts.map(contact => (
-          <li key={contact}>{contact}</li>
-        ))}
-        <td>nome</td>
-        <td>email</td>
-        <td>tel</td>
-        <td>
-          <button type="button">edit</button>
-        </td>
-        <td>
-          <button type="button">delete</button>
-        </td>
-      </tr>
+      <Table>
+        <thead>
+          <th />
+          <th>Contatos</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+          <th />
+          <th />
+        </thead>
+        <tbody>
+          {props.contacts.length > 0 ? (
+            props.contacts.map(contact => (
+              <tr key={contact.id}>
+                <td className="iconLetter">
+                  <span>
+                    <p>{contact.id}</p>
+                  </span>
+                </td>
+                <td>{contact.name}</td>
+                <td>{contact.email}</td>
+                <td>{contact.phone}</td>
+                <td>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      props.editRow(contact);
+                    }}
+                  >
+                    <img src={edit} alt="Edit" />
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    onClick={() => props.deleteContact(contact.id)}
+                  >
+                    <img src={delet} alt="Delete" />
+                  </button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td className="iconLetter">
+                <span>
+                  <p>0</p>
+                </span>
+              </td>
+              <td>Você não possui contatos cadastrados.</td>
+            </tr>
+          )}
+        </tbody>
+      </Table>
     </>
   );
 }
