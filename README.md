@@ -8,14 +8,14 @@
 </h4>
 
 <p align="center">
-  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-how-to-use">How To Use</a>
+  <a href="#floppy_disk-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench_source-how-to-use">How To Use</a>
 </p>
 
 ![App Screenshot](https://imgs-web-folder.s3-sa-east-1.amazonaws.com/agenda-vazia.png)
 <p align="center">
 Deployed at:
-  <a href="https://rocketshoes.netlify.com/" target="_blank">
+  <a href="https://ubook-desafio.now.sh/" target="_blank">
     <img alt="Demo on ZEIT Now" src="https://repository-images.githubusercontent.com/67753070/5ed90480-e478-11e9-8b10-9191c6462805">
   </a>
 </p>
