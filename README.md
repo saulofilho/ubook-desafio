@@ -1,7 +1,6 @@
 <h1 align="center">
-    <img alt="Ubook Alt" src="https://img.png" />
+    <img alt="Ubook" src="https://imgs-web-folder.s3-sa-east-1.amazonaws.com/ic-logo%403x.png" />
     <br>
-    Ubook
 </h1>
 
 <h4 align="center">
@@ -13,22 +12,26 @@
   <a href="#information_source-how-to-use">How To Use</a>
 </p>
 
-![App Screenshot](https://img.png)
+![App Screenshot](https://imgs-web-folder.s3-sa-east-1.amazonaws.com/agenda-vazia.png)
 <p align="center">
+Deployed at:
   <a href="https://rocketshoes.netlify.com/" target="_blank">
-    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1563043495/readme_logos/demo_on_netlify_bbuvjz.png">
+    <img alt="Demo on ZEIT Now" src="https://repository-images.githubusercontent.com/67753070/5ed90480-e478-11e9-8b10-9191c6462805">
   </a>
 </p>
 
-## :rocket: Technologies
+## :floppy_disk: Technologies
 
 This project was developed with the following technologies:
 
 -  [ReactJS](https://reactjs.org/)
 -  [styled-components](https://www.styled-components.com/)
+-  [modali](https://www.styled-components.com/)
+-  [sweetalert](https://www.styled-components.com/)
+-  [react-text-mask](https://www.styled-components.com/)
 -  [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
-## :information_source: How To Use
+## :wrench: How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer. From your command line:
 
@@ -37,7 +40,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/saulofilho/ubook-desafio
 
 # Go into the repository
-$ cd react-rocketshoes
+$ cd ubook-desafio
 
 # Install dependencies
 $ yarn install

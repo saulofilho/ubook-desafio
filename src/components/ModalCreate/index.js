@@ -1,34 +1,19 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import { Formik } from 'formik';
-import * as yup from 'yup';
 import MaskedInput from 'react-text-mask';
+import PropTypes from 'prop-types';
 import { Container, Form } from './styles';
 
 function ModalCreate(props) {
   const initialFormState = { id: null, name: '', email: '', phone: '' };
   const [contact, setContact] = useState(initialFormState);
+  const [inp, upInp] = useState('');
 
   const handleInputChange = e => {
     const { name, value } = e.target;
-
+    upInp(e.target.value);
     setContact({ ...contact, [name]: value });
   };
-
-  const validations = yup.object().shape({
-    name: yup
-      .string()
-      .min()
-      .required(),
-    email: yup
-      .string()
-      .email()
-      .required(),
-    phone: yup
-      .string()
-      .min()
-      .required(),
-  });
 
   return (
     <Container>
@@ -64,6 +49,7 @@ function ModalCreate(props) {
             /\d/,
             /\d/,
             /\d/,
+            /\d/,
             '-',
             /\d/,
             /\d/,
@@ -73,7 +59,7 @@ function ModalCreate(props) {
           type="text"
           name="phone"
           id="phone"
-          placeholder="(01) 2345-6789"
+          placeholder="(01) 23456-7890"
           value={contact.phone}
           onChange={handleInputChange}
         />
@@ -82,6 +68,7 @@ function ModalCreate(props) {
             Cancelar
           </button>
           <button
+            disabled={!inp}
             className="salvar"
             type="button"
             onClick={e => {

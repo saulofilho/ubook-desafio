@@ -26,6 +26,7 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  /* modal style */
   .modali,
   .modali-body {
     background: transparent !important;
@@ -33,5 +34,9 @@ export default createGlobalStyle`
 
   .modali-open {
     padding-right: 0 !important;
+  }
+
+  .swal-modal {
+    background-color: transparent;
   }
 `;

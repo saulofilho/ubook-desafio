@@ -6,10 +6,6 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6); */
 `;
 
 export const Form = styled.form`
@@ -80,5 +76,9 @@ export const Form = styled.form`
     background-color: #fa7268;
     color: #fff;
     margin: 16px;
+
+    &[disabled] {
+      background-color: lightgray;
+    }
   }
 `;

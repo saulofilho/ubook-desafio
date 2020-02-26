@@ -6,15 +6,15 @@ import { Container, Form } from './styles';
 function ModalEdit(props) {
   const [contact, setContact] = useState(props.currentContact);
 
-  useEffect(() => {
-    setContact(props.currentContact);
-  }, [props]);
-
   const handleInputChange = e => {
     const { name, value } = e.target;
 
     setContact({ ...contact, [name]: value });
   };
+
+  useEffect(() => {
+    setContact(props.currentContact);
+  }, [props]);
 
   return (
     <Container>

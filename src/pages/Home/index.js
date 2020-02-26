@@ -67,9 +67,11 @@ export default function Home() {
   });
   const [secondModal, toggleSecondModal] = useModali({
     animated: true,
+    closeButton: false,
   });
   const [thirdyModal, toggleThirdyModal] = useModali({
     animated: true,
+    closeButton: false,
   });
 
   // home
@@ -82,6 +84,7 @@ export default function Home() {
           editRow={editRow}
           toggleSecondModal={toggleSecondModal}
           toggleThirdyModal={toggleThirdyModal}
+          deleteContact={deleteContact}
         />
       ) : (
         <EmptyContacts toggleFirstModal={toggleFirstModal} />
