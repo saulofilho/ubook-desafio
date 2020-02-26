@@ -6,7 +6,6 @@ import Header from '../../components/Header';
 import TableRow from '../../components/TableRow';
 import ModalCreate from '../../components/ModalCreate';
 import ModalEdit from '../../components/ModalEdit';
-import ModalDelete from '../../components/ModalDelete';
 
 export default function Home() {
   // data
@@ -69,10 +68,6 @@ export default function Home() {
     animated: true,
     closeButton: false,
   });
-  const [thirdyModal, toggleThirdyModal] = useModali({
-    animated: true,
-    closeButton: false,
-  });
 
   // home
   return (
@@ -83,7 +78,6 @@ export default function Home() {
           contacts={contacts}
           editRow={editRow}
           toggleSecondModal={toggleSecondModal}
-          toggleThirdyModal={toggleThirdyModal}
           deleteContact={deleteContact}
         />
       ) : (
@@ -99,9 +93,6 @@ export default function Home() {
           currentContact={currentContact}
           updateContact={updateContact}
         />
-      </Modali.Modal>
-      <Modali.Modal {...thirdyModal}>
-        <ModalDelete contacts={contacts} deleteContact={deleteContact} />
       </Modali.Modal>
     </>
   );

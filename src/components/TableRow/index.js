@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useState } from 'react';
+import React from 'react';
 import swal from '@sweetalert/with-react';
 import { Table, Container, Form } from './styles';
 import edit from '../../assets/images/ic-edit.png';
