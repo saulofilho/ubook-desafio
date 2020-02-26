@@ -1,19 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ButtonHeader from '../ButtonHeader';
-import { Container, Image, Search } from './styles';
+import { Container, Image, Search, Button } from './styles';
 import logo from '../../assets/images/ic-logo.png';
+import plus from '../../assets/images/ic-plus.png';
 
-function Header() {
+function Header(props) {
   return (
     <Container>
       <div className="left">
-        <Link to="/">
-          <Image src={logo} alt="Ubook" />
-        </Link>
+        <Image src={logo} alt="Ubook" />
       </div>
       <div className="right">
-        <ButtonHeader />
+        {props.contacts.length > 0 ? (
+          <Button onClick={props.toggleFirstModal}>
+            <img src={plus} alt="Plus" />
+            Criar Contato
+          </Button>
+        ) : null}
         <Search placeholder="Buscar..." />
       </div>
     </Container>

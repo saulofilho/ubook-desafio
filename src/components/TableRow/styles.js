@@ -49,14 +49,18 @@ export const Table = styled.table`
     font-weight: normal;
   }
 
+  tbody tr:hover {
+    background-color: #fff3f2;
+    cursor: pointer;
+  }
+
+  tbody tr td {
+    border-bottom: 1px solid #e1e1e1;
+  }
+
   button {
     border: 0;
     background: none;
-  }
-
-  tr:hover {
-    background-color: #fff3f2;
-    cursor: pointer;
   }
 
   .noContacts {

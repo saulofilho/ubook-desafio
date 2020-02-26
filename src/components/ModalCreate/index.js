@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import { Formik } from 'formik';
+import * as yup from 'yup';
 import MaskedInput from 'react-text-mask';
 import { Container, Form } from './styles';
 
@@ -12,6 +14,21 @@ function ModalCreate(props) {
 
     setContact({ ...contact, [name]: value });
   };
+
+  const validations = yup.object().shape({
+    name: yup
+      .string()
+      .min()
+      .required(),
+    email: yup
+      .string()
+      .email()
+      .required(),
+    phone: yup
+      .string()
+      .min()
+      .required(),
+  });
 
   return (
     <Container>
@@ -61,7 +78,7 @@ function ModalCreate(props) {
           onChange={handleInputChange}
         />
         <div className="buttons">
-          <button className="cancelar" type="button">
+          <button className="cancelar" type="button" onClick={null}>
             Cancelar
           </button>
           <button

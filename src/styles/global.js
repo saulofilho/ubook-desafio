@@ -25,4 +25,13 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  .modali,
+  .modali-body {
+    background: transparent !important;
+  }
+
+  .modali-open {
+    padding-right: 0 !important;
+  }
 `;

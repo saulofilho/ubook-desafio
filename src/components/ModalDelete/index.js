@@ -1,31 +1,30 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Form } from './styles';
 
-function ModalDelete() {
-  const [contacts, setContact] = useState(['']);
-  const [newContact, setNewContact] = useState('');
-
-  function handleAdd(e) {
-    e.preventDefault();
-    setContact([...contacts, newContact]);
-    setNewContact('');
-  }
-
+function ModalDelete(props) {
   return (
     <Container>
-      <Form>
-        <p>Excluir contato</p>
-        <label htmlFor="name">Deseja realmente excluir o contato?</label>
-        <div className="buttons">
-          <button className="cancelar" type="button" onClick={handleAdd}>
-            Cancelar
-          </button>
-          <button className="excluir" type="button" onClick={handleAdd}>
-            Excluir
-          </button>
-        </div>
-      </Form>
+      {props.contacts.length > 0
+        ? props.contacts.map(contact => (
+            <Form>
+              <p>Excluir contato</p>
+              <label htmlFor="name">Deseja realmente excluir o contato?</label>
+              <div className="buttons">
+                <button className="cancelar" type="button" onClick={null}>
+                  Cancelar
+                </button>
+                <button
+                  className="excluir"
+                  type="button"
+                  onClick={() => props.deleteContact(contact.id)}
+                >
+                  Excluir
+                </button>
+              </div>
+            </Form>
+          ))
+        : null}
     </Container>
   );
 }
