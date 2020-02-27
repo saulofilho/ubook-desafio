@@ -90,11 +90,11 @@ export const Table = styled.table`
   }
 
   .editBtn {
-    margin-right: calc(1vw - 1.9vw);
+    margin-right: calc(1vw - 1.7vw);
   }
 
   .deletBtn {
-    margin-right: calc(1vw - 1.5vw);
+    margin-right: calc(1vw - 1.6vw);
   }
 `;
 
