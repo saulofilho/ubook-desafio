@@ -1,28 +1,23 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-import React from 'react';
+import React, { useState } from 'react';
 import swal from '@sweetalert/with-react';
 import { Table, Container, Form } from './styles';
 import edit from '../../assets/images/ic-edit.png';
 import delet from '../../assets/images/ic-delete.png';
 
 function TableRow(props) {
-  // const [colors, setColors] = useState([
-  //   'red',
-  //   'yellow',
-  //   'blue',
-  //   'green',
-  //   'purple',
-  //   'pink',
-  // ]);
-
-  // const changeColor = () => {
-  //   const { colors } = useState;
-  //   const color = colors[Math.floor(Math.random() * colors.length)];
-  //   document.body.style.backgroundColor = color;
-  //   console.log(changeColor);
-  // };
+  const getRandomColor = () => {
+    const colorValues = [
+      '#fa8d68',
+      '#90d26c',
+      '#68a0fa',
+      '#fab668',
+      '#8368fa',
+      '#fa68b5',
+      '#5fe2c4',
+      '#f55a5a',
+    ];
+    return colorValues[Math.floor(Math.random() * colorValues.length)];
+  };
 
   return (
     <>
@@ -38,11 +33,15 @@ function TableRow(props) {
           </tr>
         </thead>
         <tbody>
-          {props.contacts.length > 0
-            ? props.contacts.map(contact => (
+          {props.searchResults.length > 0
+            ? props.searchResults.map(contact => (
                 <tr key={contact.id}>
                   <td className="iconLetter">
-                    <span>
+                    <span
+                      style={{
+                        background: `${getRandomColor()}`,
+                      }}
+                    >
                       <p>{contact.name.charAt(0).toUpperCase()}</p>
                     </span>
                   </td>
@@ -64,6 +63,7 @@ function TableRow(props) {
                   </td>
                   <td>
                     <button
+                      className="deletBtn"
                       type="button"
                       onClick={() =>
                         swal({

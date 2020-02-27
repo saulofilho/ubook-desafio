@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="#floppy_disk-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#wrench_source-how-to-use">How To Use</a>
+  <a href="#wrench-how-to-use">How To Use</a>
 </p>
 
 ![App Screenshot](https://imgs-web-folder.s3-sa-east-1.amazonaws.com/agenda-vazia.png)

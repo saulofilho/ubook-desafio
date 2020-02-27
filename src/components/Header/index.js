@@ -4,6 +4,7 @@ import logo from '../../assets/images/ic-logo.png';
 import plus from '../../assets/images/ic-plus.png';
 
 function Header(props) {
+  console.log('5', props.searchTerm);
   return (
     <Container>
       <div className="left">
@@ -16,7 +17,11 @@ function Header(props) {
             Criar Contato
           </Button>
         ) : null}
-        <Search placeholder="Buscar..." />
+        <Search
+          placeholder="Buscar..."
+          value={props.searchTerm}
+          onChange={props.handleChange}
+        />
       </div>
     </Container>
   );

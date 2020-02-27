@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Modali, { useModali } from 'modali';
 import EmptyContacts from '../../components/EmptyContacts';
@@ -69,16 +68,38 @@ export default function Home() {
     closeButton: false,
   });
 
+  // search
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const handleChange = e => {
+    setSearchTerm(e.target.value);
+  };
+  useEffect(() => {
+    const results = contacts.filter(contact =>
+      contact.name.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(results);
+  }, [contacts, searchTerm]);
+
   // home
   return (
     <>
-      <Header contacts={contacts} toggleFirstModal={toggleFirstModal} />
+      <Header
+        contacts={contacts}
+        toggleFirstModal={toggleFirstModal}
+        searchResults={searchResults}
+        value={searchTerm}
+        handleChange={handleChange}
+        setSearchTerm={setSearchTerm}
+        searchTerm={searchTerm}
+      />
       {contacts.length > 0 ? (
         <TableRow
           contacts={contacts}
           editRow={editRow}
           toggleSecondModal={toggleSecondModal}
           deleteContact={deleteContact}
+          searchResults={searchResults}
         />
       ) : (
         <EmptyContacts toggleFirstModal={toggleFirstModal} />
