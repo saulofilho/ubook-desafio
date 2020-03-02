@@ -4,7 +4,6 @@ import logo from '../../assets/images/ic-logo.png';
 import plus from '../../assets/images/ic-plus.png';
 
 function Header(props) {
-  console.log('5', props.searchTerm);
   return (
     <Container>
       <div className="left">

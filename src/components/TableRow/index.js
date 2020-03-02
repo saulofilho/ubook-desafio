@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import swal from '@sweetalert/with-react';
 import { Table, Container, Form } from './styles';
 import edit from '../../assets/images/ic-edit.png';
@@ -79,7 +79,7 @@ function TableRow(props) {
                                   <button
                                     className="cancelar"
                                     type="button"
-                                    onClick={null}
+                                    onClick={() => swal.close()}
                                   >
                                     Cancelar
                                   </button>

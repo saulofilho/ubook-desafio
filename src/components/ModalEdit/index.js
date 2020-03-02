@@ -67,7 +67,7 @@ function ModalEdit(props) {
           <button
             className="cancelar"
             type="button"
-            onClick={() => props.setEditing(false)}
+            onClick={props.toggleSecondModal}
           >
             Cancelar
           </button>

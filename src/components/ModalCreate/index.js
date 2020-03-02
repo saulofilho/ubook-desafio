@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import MaskedInput from 'react-text-mask';
-import PropTypes from 'prop-types';
 import { Container, Form } from './styles';
 
 function ModalCreate(props) {
@@ -64,7 +62,11 @@ function ModalCreate(props) {
           onChange={handleInputChange}
         />
         <div className="buttons">
-          <button className="cancelar" type="button" onClick={null}>
+          <button
+            className="cancelar"
+            type="button"
+            onClick={props.toggleFirstModal}
+          >
             Cancelar
           </button>
           <button

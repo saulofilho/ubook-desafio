@@ -78,7 +78,7 @@ export const Form = styled.form`
     margin: 16px;
 
     &[disabled] {
-      background-color: lightgray;
+      background-color: #fff3f2;
     }
   }
 `;

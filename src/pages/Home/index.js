@@ -105,7 +105,10 @@ export default function Home() {
         <EmptyContacts toggleFirstModal={toggleFirstModal} />
       )}
       <Modali.Modal {...firstModal}>
-        <ModalCreate addContact={addContact} />
+        <ModalCreate
+          addContact={addContact}
+          toggleFirstModal={toggleFirstModal}
+        />
       </Modali.Modal>
       <Modali.Modal {...secondModal}>
         <ModalEdit
@@ -113,6 +116,7 @@ export default function Home() {
           setEditing={setEditing}
           currentContact={currentContact}
           updateContact={updateContact}
+          toggleSecondModal={toggleSecondModal}
         />
       </Modali.Modal>
     </>

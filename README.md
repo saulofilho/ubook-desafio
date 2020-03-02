@@ -26,9 +26,9 @@ This project was developed with the following technologies:
 
 -  [ReactJS](https://reactjs.org/)
 -  [styled-components](https://www.styled-components.com/)
--  [modali](https://www.styled-components.com/)
--  [sweetalert](https://www.styled-components.com/)
--  [react-text-mask](https://www.styled-components.com/)
+-  [modali](https://upmostly.github.io/modali/)
+-  [sweetalert](https://sweetalert.js.org/)
+-  [react-text-mask](https://text-mask.github.io/text-mask/)
 -  [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
 ## :wrench: How To Use

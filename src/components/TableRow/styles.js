@@ -130,6 +130,7 @@ export const Form = styled.form`
     font-size: 14px;
     font-weight: normal;
     margin-bottom: 57px;
+    text-align: left;
   }
 
   .buttons {
