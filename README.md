@@ -16,7 +16,7 @@
 <p align="center">
 Deployed at:
   <a href="https://ubook-desafio.now.sh/" target="_blank">
-    <img alt="Demo on ZEIT Now" src="https://repository-images.githubusercontent.com/67753070/5ed90480-e478-11e9-8b10-9191c6462805">
+    <img alt="Demo on ZEIT Now" src="https://camo.githubusercontent.com/03cee0e925b0dd40d792c42b1dc1b8a7448dbdfe/68747470733a2f2f6173736574732e7a6569742e636f2f696d6167652f75706c6f61642f76313538313531383533332f7265706f7369746f726965732f6e6f772d636c692f76342e706e67">
   </a>
 </p>
 
